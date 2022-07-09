@@ -118,6 +118,7 @@ body.dark {
 		grid-template-columns: repeat(3,1fr);
 		grid-template-rows: repeat(3, min-content);
 	}
+	
 }
 
 .card {
@@ -151,6 +152,14 @@ body.dark {
 	font-size: .9rem;
 	line-height: 1.6;
 }
+@media screen and (min-width:760px) {
+	.card--project {
+		display: grid;
+		
+		grid-column: 1  / -1;
+	}
+}
+
 .skills{
 	padding: 1em 0;
 }
@@ -245,6 +254,10 @@ body.dark {
 .experience__description {
 	font-size: 0.8em;
 	margin-bottom: 1.5em;
+}
+.project {
+	margin-left: 2em;
+
 }
 .icon {
 	margin-right: .3em;
