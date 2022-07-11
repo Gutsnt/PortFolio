@@ -45,7 +45,7 @@ body.dark {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-right:84%;
+	margin-right: 450px;
 }
 
 .toggle-theme {
@@ -64,12 +64,24 @@ body.dark {
 	font-size: 0.8em;
 }
 
+.flags {
+	width: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flags__item {
+	width: 30px;
+}
+
 .colors {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 20px;
 	width: 100px;
+	margin-left: 450px;
 }
 
 .colors__item {
@@ -182,7 +194,7 @@ body.dark {
 .skills__bar,
 .skills__bar::after{
 	position: relative;
-	margin-left: px;
+
 	width: 175px;
 	height: 8px;
 	background-color: #888;
