@@ -6,6 +6,19 @@ const toggleColors = document.getElementById('toggle-colors')
 
 const rootStyles = document.documentElement.style;
 
+const flagElement = document.getElementById('flags');
+
+const changueLanguage = async (language) => {
+	const requestJson = await fetch(`./languages/${language}.json`)
+	const texts = await requestJson.json()
+
+	console.log(texts);
+}
+
+flagElement.addEventListener('click', (e) =>{
+	changueLanguage(e.target.parentElement.dataset.language)
+})
+
 toggleTheme.addEventListener('click', ()=>{
 	document.body.classList.toggle('dark');
 	if(toggleIcon.src.includes('moon.svg')){
@@ -20,3 +33,4 @@ toggleTheme.addEventListener('click', ()=>{
 toggleColors.addEventListener('click', (e)=>{
 	rootStyles.setProperty('--primary-color', e.target.dataset.color)
 });
+
