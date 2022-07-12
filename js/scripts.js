@@ -8,11 +8,18 @@ const rootStyles = document.documentElement.style;
 
 const flagElement = document.getElementById('flags');
 
+const textToChangue = document.querySelectorAll("[data-section]");
+
 const changueLanguage = async (language) => {
 	const requestJson = await fetch(`./languages/${language}.json`)
 	const texts = await requestJson.json()
 
-	console.log(texts);
+	for (const textToChangue of textToChangue) {
+		const section = textToChangue.dataset.section;
+		const value = textToChangue.dataset.value;
+
+		textToChangue.innerHTML=texts[section][value];
+	}
 }
 
 flagElement.addEventListener('click', (e) =>{
